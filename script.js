@@ -1,6 +1,6 @@
  "use strict";
 
-let javascriptIsFun=true;
+/*let javascriptIsFun=true;
 console.log(typeof javascriptIsFun );
 console.log(40+24+34);
 console.log("naveen");
@@ -96,7 +96,7 @@ console.log(markBMI);*/
 /*let johnsmass=78;
 let johnsheight=1.69;
 johnsBMI=johnsmass/(johnsheight*johnsheight);
-console.log(johnsBMI);*/
+console.log(johnsBMI);
 
 if(markBMI > johnsBMI){
     console.log(`mark's bmi is ${markBMI} is higher than the ${johnsBMI} johns bmi`);
@@ -162,7 +162,7 @@ if (kolasScore > dolphinsScore){
 if (kolasScore === dolphinsScore){
     console.log("The competiton will be draw ") ;
 }
-*/const dolphinsScore=((97+112+80)/3);
+const dolphinsScore=((97+112+80)/3);
 const kolasScore=((109+95+50)/3)
 console.log(dolphinsScore , kolasScore);
 if(dolphinsScore > kolasScore && dolphinsScore  >= 100 ){
@@ -210,5 +210,242 @@ let hasDriversLicense=false;
 const passTest=true;
 if (passTest) hasDriversLicense=true;
 if (hasDriversLicense) console.log('i can drive');
+
+
+function naveenkumar(){
+    console.log('my name is j.naveen kumar');
+}
+
+naveenkumar()
+naveenkumar()
+
+
+function fruitProcessor(apples,oranges){
+    console.log(apples,oranges);
+    const juice=`juice with ${apples} apples and ${oranges} oranges`;
+    return juice;
+
+}
+ 
+const appleJuice= fruitProcessor(9,0);
+console.log(appleJuice);
+const appleorangeJuice= fruitProcessor(2,4);
+console.log(appleorangeJuice);
+const num=Number('23');
+
+
+// function decclaration
+function calcAge1(birthYear){
+// let a=2037-birthYear;
+return 2037-birthYear;
+// return a;
+}
+const age2= calcAge1(1991);
+console.log(age2);
+
+
+// function expression
+let age3= function(birthYear){
+   return 2037-birthYear
+
+}
+const age4=age3(1991);
+console.log(age2, age4);
+
+const calcRetirementAge=(firstName,birthYear)=>{
+    let age= 2022-birthYear;
+    const retirementAge=65-age;
+    return `${firstName} retires in ${retirementAge} years`;
+}
+console.log(calcRetirementAge(naveen,1999))
+
+const calcAge=(ageofBirth)=>{
+    const presentAge=2022-ageofBirth;
+    return presentAge;
+}
+console.log(calcAge(1999));
+
+function cutFruitPieces(fruits){
+    return fruits * 4;
+}
+function numberofFruits(apples,oranges){
+    const applePieces=cutFruitPieces(apples);
+    const orangePieces=cutFruitPieces(oranges);
+    const juice= `fruit juice  with ${applePieces} apple pieces and ${orangePieces}  orange pieces.`
+    console.log("hi naveen Kumar ");
+    return juice;
+    
+}
+console.log (numberofFruits(6,4))
+
+const friend1="naveen";
+const  friend2="kumar";
+const  na=["naveen","kumar"];
+//   na=["navin","kuar"];
+
+console.log(na);
+na[1]="naveen";
+console.log(na);
+
+const years=new Array(1991,1992,1993,1994);
+console.log(years[0]);
+console.log(years[1]);
+console.log(years[2]);
+console.log(years.length);
+console.log(years.length-1);
+console.log(years);
+console.log(years[years.length-1]);
+console.log(years[years.length-1]);
+
+const ab="gambhir";
+const ne= [ab,"naveenkumar",2037-1991,na]
+console.log(ne);
+console.log(ne.length-1);
+
+function calcAge1(birthYear){
+    
+    return 2037-birthYear;
+}
+const age = [1991,1992,1999,2000];
+console.log(calcAge1(age));
+console.log(calcAge1(age[0]));
+console.log(calcAge1(age[1]));
+console.log(calcAge1(age[2]));
+console.log(calcAge1(age[3]));
+console.log(age.length);*/
+const age = [1991,1992,1999,2000];
+age.push(1997);
+console.log(age);
+console.log(age.length-1);
+age.unshift("naveen");
+console.log(age);
+const poped= age.pop();
+console.log(poped);
+
+
+const poped1= age.pop();
+console.log(poped1);
+console.log(age);
+const n=age.shift();
+console.log(n);
+console.log(age);
+console.log(age.indexOf(1991));
+console.log(age.indexOf(1947));
+console.log(age.indexOf(1948));
+console.log(age.includes(1991));
+console.log(age.includes('1991'));
+
+if(age.includes(1991)){
+    console.log("hi naveen kumar");  
+}
+
+const calcTip=function(bill){
+    return bill>=50 && bill <= 300 ? bill*0.15 : bill * 0.2;
+
+}
+const bills =[125,555,44];
+
+const tips= [calcTip(bills[0]), calcTip(bills[1]),calcTip(bills[2])];
+const total= [bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]];
+console.log(bills,tips,total);
+
+const john2={
+    firstName: "naveen",
+    lastName: "jada",
+    //age:2022-1999,
+    location :"proddatur",
+     gmail : "nav@gmail.com",
+     friends: ["sudeer","sandy","surya"],
+     birthYear: 2017,
+     DriversLicense:true,
+      calcAge:function(birthYear){
+
+        console.log(this);
+        return 2037-this.birthYear;
+     },
+     getSummary : function(){
+        return `${this.firstName} age  is ${this.calcAge() } and he has ${this.DriversLicense ? 'a': 'no'} driversLiceense `;
+     }
+}
+/*console.log(john.firstName);
+console.log(john.lastName);
+console.log(john['firstName']);
+console.log(john['lastName']);
+const nameKey='Name';
+console.log(john['first'+nameKey])
+console.log(john['last'+nameKey])
+// console.log(john.'first'+nameKey)
+const intrestedIn= prompt('what do you want to know about john  ? choose between firstName,lastName,age,location,gmail')
+console.log(john[intrestedIn]);
+//john['location'] ="proddatur";
+//john['gmail']="nav@gmail.com";
+
+console.log(`${john.firstName} has ${john.friends.length} friends and his best friend is called ${john.friends[0]}`);
+console.log(john.calcAge(1999));
+console.log(john ['calcAge'](1999));*/
+console.log(john2.calcAge());
+console.log(john2.getSummary());
+
+/*for (let rep=1;rep<=10;rep++){
+        console.log('Hi Naveen kumar ')
+}
+
+const jonas= [
+    'jonas',
+    'schemtdman',
+      2037-1999,
+      'teacher',
+      ['michal','peter','peter'],
+      true,
+      23
+
+]
+
+const types=[];
+for (let i=0;i<jonas.length;i++){
+    console.log(jonas[i], typeof jonas[i]);
+    //types [i] =typeof jonas[i]
+    types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years=[1991,1992,1993,1994];
+const ages= [];
+for (let i=0; i<=years.length-1;i++){
+    ages.push(2037-years[i])
+}
+console.log(ages);*/
+
+const jonas= [
+    'jonas',
+    'schemtdman',
+      2037-1999,
+      'teacher',
+      ['michal','peter','peter'],
+      true,
+      23
+
+]
+  //continue statement 
+
+/*console.log('---only strings---');
+for(let i=0;i<jonas.length;i++){
+    if(typeof jonas[i] !== 'string')
+    continue;
+    console.log(jonas[i], typeof jonas[i]);
+}*/
+
+// break statement 
+
+console.log('breaks  when number cames');
+
+for (let i=0;i<jonas.length;i++){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    if (typeof jonas[i]==='number' ) break;
+        console.log(typeof jonas[i], jonas[i]);
+    
+
+}
+
 
 
