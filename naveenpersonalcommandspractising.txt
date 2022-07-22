@@ -1,0 +1,33 @@
+
+to push a code to new repository in git 
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:naveen12345jada/jada-naveen-kumar-javascript.git
+git push -u origin main
+
+
+
+to push a code to  existing  repository in git 
+
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+/////git remote add origin git@github.com:naveen12345jada/jada-naveen-kumar-javascript.git \\\\\\\\\ {no need of command for existing repository }
+git pull --rebase origin main
+git push -u origin main
+
+
+Then install the live-server package globally
+
+npm install -g live-server
+
+to show the output in browser we have to type a command live-server
+
+(if you find an error just type below command and the error will be removed)
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
