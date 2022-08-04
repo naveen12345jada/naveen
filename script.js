@@ -1,4 +1,4 @@
- "use strict";
+'use strict';
 
 /*let javascriptIsFun=true;
 console.log(typeof javascriptIsFun );
@@ -313,8 +313,8 @@ console.log(calcAge1(age[1]));
 console.log(calcAge1(age[2]));
 console.log(calcAge1(age[3]));
 console.log(age.length);*/
-const age = [1991,1992,1999,2000];
-age.push(1997);
+/*const age = [1991, 1992, 1999, 2000];*/
+/*age.push(1997);
 console.log(age);
 console.log(age.length-1);
 age.unshift("naveen");
@@ -383,8 +383,8 @@ console.log(john[intrestedIn]);
 console.log(`${john.firstName} has ${john.friends.length} friends and his best friend is called ${john.friends[0]}`);
 console.log(john.calcAge(1999));
 console.log(john ['calcAge'](1999));*/
-console.log(john2.calcAge());
-console.log(john2.getSummary());
+// console.log(john2.calcAge());
+// console.log(john2.getSummary());
 
 /*for (let rep=1;rep<=10;rep++){
         console.log('Hi Naveen kumar ')
@@ -417,24 +417,23 @@ for (let i=0; i<=years.length-1;i++){
 }
 console.log(ages);*/
 
-const jonas= [
-    'jonas',
-    'schemtdman',
-      2037-1999,
-      'teacher',
-      ['michal','peter','peter'],
-      true,
-      23
-
-]
-  //continue statement 
+/*const jonas = [
+  'jonas',
+  'schemtdman',
+  2037 - 1999,
+  'teacher',
+  ['michal', 'peter', 'peter'],
+  true,
+  23,
+];*/
+//continue statement
 
 /*console.log('---only strings---');
 for(let i=0;i<jonas.length;i++){
     if(typeof jonas[i] !== 'string')
     continue;
     console.log(jonas[i], typeof jonas[i]);
-}*/
+}
 
 // break statement 
 
@@ -444,8 +443,163 @@ for (let i=0;i<jonas.length;i++){
     if (typeof jonas[i]==='number' ) break;
         console.log(typeof jonas[i], jonas[i]);
     
+}
+
+for (let rep=jonas.length-1;rep>=0;rep--){
+    console.log(jonas[rep]);
+}
+
+
+for(let i=1;i<4;i++){
+    console.log(`hello naveen kumar ${i}`)
+  
+
+let j=1
+while(j<=10){
+    console.log(`hello naveen ${i}`);
+    j++;
+}
 
 }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`you rolled a dice ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log('the loop about to end ');
+  }
+}
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [22, 295, 176, 440, 37, 105, 37, 105, 10, 110, 86, 52];
+
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+}
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  console.log(sum);
+};
+const avg = calcAverage([1, 10, 2]);
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = [1, 2, 3, 4];
+const arr3 = arr1.concat(arr2);
+console.log(arr3);
+console.log(typeof arr3);
+const temperatures = [3, -2, -6, -1, 'error', 9, 13, 15, 14, 9, 5];
+const calcTempAmplitude = function (temps) {
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    const currtemp = temps[i];
+    if (typeof currtemp !== 'number') continue;
+    if (currtemp > max) max = currtemp;
+    if (currtemp < min) min = currtemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const amplitude = calcTempAmplitude(temperatures);
+console.log(amplitude);*/
+
+/*const calcTempAmplitude = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    const currtemp = temps[i];
+    if (typeof currtemp !== 'number') continue;
+    if (currtemp > max) max = currtemp;
+    if (currtemp < min) min = currtemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const amplitudeNew = calcTempAmplitude([3, 5, 7], [1, 2, 3]);
+console.log(amplitudeNew);
+
+const number = Math.trunc(Math.random() * 20) + 1;
+console.log(number);
+console.log((document.querySelector('.sujan').na = '3 '));
+//console.log(document.querySelector('.sujan').na);
+
+document.querySelector('.qw').addEventListener('click', function () {
+  const vow = Number(document.querySelector('.w').value);
+  console.log(typeof vow, vow);
+});
+
+if (!this.vow) {
+  console.log('no number');
+} else if (vow === number) {
+  console.log(document.querySelector('.sujan').na);
+}
+document.querySelector('.w').style.width = '15rem';*/
+
+//function scope, global scope, local scope
+
+/* function calcAge(birthYear) {
+  console.log(firstName); // local scope variables can be accesed global scope variables
+  var age = 2037 - birthYear;
+  console.log(age);
+  if (birthYear >= 1981 && birthYear <= 2000) {
+    var ame = 'kutti';
+
+    function add(a, b) {
+      var c = a + b;
+      console.log(c);
+    }
+    add(2, 3);
+  }
+  console.log(ame); // block scope variables with var decclartion can be accesed to out of scope because var is not a block scope and it is a function scope can be accesed to function and it can't be accesed to global scope
+}
+
+var firstName = 'naveen';
+calcAge(1999);
+//console.log(ame);
+//console.log(age);
+// local scope variables can't be accesed because this is global scope */
+
+/*let birthYear = 1986;
+const firstName = 'naveen';
+if (birthYear >= 1981 && birthYear <= 2000) {
+  const firstName = 'kutti'; // if we want to print the first name in local scope if the variables are same name in both local and global scope and the priotrity it will print current scope variable name only
+  console.log(firstName); //it will print current scope variable
+}
+console.log(firstName); //it will print current scope variable */
+
+/*console.log(n);
+//console.log(a);
+//console.log(c);
+
+var n = 'naveen';
+let a = 'sujan';
+const c = 'dummy';
+const arr= [1,10,20];
+const [x,y]= arr;
+console.log(x,y);
+console.log(arr);*/
+
+function myFunction() {
+  alert("Hello World!");
+}
+myFunction();
 
 
 

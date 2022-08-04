@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<college>
+<boys>
+ <student1>Naveen kumar</student1>
+ <student2>sujan kumar j</student2>
+ </boys>
+ <girls>
+ <stud1>ramadevi</stud1>
+ <stud2>sreeja </stud2>
+ </girls>
+ <teacher>
+ <name1>rangaiah</name1>
+ <name2>subbarayudu</name2>
+ </teacher>
+
+ </college>
+
+
